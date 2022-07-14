@@ -12,8 +12,8 @@ This rest-api app provides/stores the details of bmi of a person based on their 
 1. Download/pull the git repo first
 
 ```sh
-    run npm i.
-    run npm run dev to start server.
+    **npm i** - To Install packages
+    **npm run dev** - To start server.
 ```
 
 
@@ -103,10 +103,7 @@ password: '12345678',
 database: 'test'
 table-name: bmi
 ```
-The table schema more or like as below
-```sh
 
-```
 Sample schema and data will be available in the code repo with file name : [db_file.sql]
 
 

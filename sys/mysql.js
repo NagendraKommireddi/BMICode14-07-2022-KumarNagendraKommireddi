@@ -1,4 +1,4 @@
-
+// Change the database details if needed
 const mysqlconfig = {
   host: 'localhost',
   port: 3306,
