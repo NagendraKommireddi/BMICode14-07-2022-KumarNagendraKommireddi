@@ -26,10 +26,10 @@ class MenuClass {
             if(!['Male','Female'].includes(element.Gender)){
                 throw new Error('Invalid Gender Param');
             }
-            if(isNaN(element.HeightCm)){
+            if(isNaN(element.HeightCm) && element.HeightCm > 0){
                 throw new Error('Invalid Height Param');
             }
-            if(isNaN(element.WeightKg)){
+            if(isNaN(element.WeightKg) && element.WeightKg > 0){
                 throw new Error('Invalid Weight Param');
             }
             let bmi = element.WeightKg/Math.pow(element.HeightCm * 0.01,2);
