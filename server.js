@@ -1,11 +1,22 @@
-// set environment variables
   const http = require('http');
   const express = require('express');
   const app = express();
   const port = 3000;
   const bodyParser = require('body-parser');
-
+  const cluster = require("cluster");
+  const totalCPUs = require("os").cpus().length;
  
+if (cluster.isMaster) { 
+  // Fork workers.
+  for (let i = 0; i < totalCPUs; i++) {
+    cluster.fork();
+  }
+ 
+  cluster.on("exit", (worker, code, signal) => {
+    cluster.fork();
+  });
+} else {
+  const app = express();
 
   app.use(bodyParser.json({ limit: '50mb' }));
   app.use(bodyParser.urlencoded({ extended: true, limit: '50mb' }));
@@ -56,3 +67,4 @@
     console.log(`App listening on port ${port}`)
   });
   
+}

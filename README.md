@@ -5,6 +5,7 @@ This rest-api app provides/stores the details of bmi of a person based on their 
 ## Technical details
 - [NodeJs] - Used  node js as the primary language
 - [Express] - frameowork for the best usecases in api
+- [ExpressCluster] - to improve the performance of api
 - [mysql] - as the database.
 - [mocha] - for unit testing
 
@@ -117,6 +118,7 @@ mocha
 
    [NodeJs]: <http://nodejs.org>
    [express]: <http://expressjs.com>
+   [ExpressCluster]: <https://www.npmjs.com/package/express-cluster>
    [mysql]: <https://www.mysql.com/>
    [mocha]: <https://mochajs.org/>
    [db_file.sql]: <https://github.com/NagendraKommireddi/BMICode14-07-2022-KumarNagendraKommireddi/blob/main/db_file.sql>
