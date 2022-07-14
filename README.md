@@ -22,7 +22,7 @@ Method : GET
 ```sh
 localhost:3000
 ```
-# Sample Response:
+### Sample Response:
 ```sh
 {
     "message": "Server Working!"
@@ -34,7 +34,7 @@ Method : Get
 localhost:3000/menu/
 ```
 
-# Sample Response:
+### Sample Response:
 ```sh
 {
     "status": "success",
@@ -52,12 +52,12 @@ localhost:3000/menu/
 }
 ```
 
-## API - Get All Bmi Details
+## API - Get count of Overweight Persons
 Method: Get
 ```sh
 localhost:3000/menu/overweightcount
 ```
-# Sample Response:
+### Sample Response:
 ```sh
 {
     "status": "success",
@@ -74,7 +74,7 @@ Method: Post
 ```sh
 localhost:3000/menu/add
 ```
-# Sample Request Body:
+### Sample Request Body:
 ```sh
 [
     {
@@ -85,7 +85,7 @@ localhost:3000/menu/add
 ]
 ```
 
-# Sample Response:
+### Sample Response:
 ```sh
 {
     "status": "success",
@@ -94,6 +94,7 @@ localhost:3000/menu/add
 ```
 
 ## Database Details
+As the configs are set for local please keep the database config as follows are change the same in [sys/mysql.js] file.
 ```sh
 host: 'localhost',
 port: 3306,
@@ -106,7 +107,7 @@ The table schema more or like as below
 ```sh
 
 ```
-Sample schema and data will be available in the code repo with file name : [db_file.sql] (https://github.com/NagendraKommireddi/BMICode14-07-2022-KumarNagendraKommireddi/blob/main/db_file.sql)
+Sample schema and data will be available in the code repo with file name : [db_file.sql]
 
 
 ## Running unit Tests
@@ -117,7 +118,9 @@ Please run the below command on a new terminal window
 mocha
 ```
 
-   [node.js]: <http://nodejs.org>
+   [NodeJs]: <http://nodejs.org>
    [express]: <http://expressjs.com>
    [mysql]: <https://www.mysql.com/>
    [mocha]: <https://mochajs.org/>
+   [db_file.sql]: <https://github.com/NagendraKommireddi/BMICode14-07-2022-KumarNagendraKommireddi/blob/main/db_file.sql>
+   [sys/mysql.js]: <https://github.com/NagendraKommireddi/BMICode14-07-2022-KumarNagendraKommireddi/blob/main/sys/mysql.js>
