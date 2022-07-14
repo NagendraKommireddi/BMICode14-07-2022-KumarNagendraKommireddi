@@ -23,6 +23,15 @@ class MenuClass {
         let totalData = [];
         for (let i = 0; i < bmiData.length; i++) {
             let element = data[i];
+            if(!['Male','Female'].includes(element.Gender)){
+                throw new Error('Invalid Gender Param');
+            }
+            if(isNaN(element.HeightCm)){
+                throw new Error('Invalid Height Param');
+            }
+            if(isNaN(element.WeightKg)){
+                throw new Error('Invalid Weight Param');
+            }
             let bmi = element.WeightKg/Math.pow(element.HeightCm * 0.01,2);
             let sqlInsertData;
                 if (bmi <= 18.4 ){
@@ -98,7 +107,7 @@ class MenuClass {
     }catch (error) {
         console.log(error);
         return new Promise((resolve, reject) => {
-          reject(error.message);
+          reject(error);
         });
     }
 }
