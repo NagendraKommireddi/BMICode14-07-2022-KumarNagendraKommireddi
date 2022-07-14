@@ -1,4 +1,4 @@
-# BMICode14-07-2022-KumarNagendraKommireddi
+# BodyMassIndex-API
 
 This rest-api app provides/stores the details of bmi of a person based on their height and weight.
 
@@ -6,7 +6,7 @@ This rest-api app provides/stores the details of bmi of a person based on their 
 - [NodeJs] - Used  node js as the primary language
 - [Express] - frameowork for the best usecases in api
 - [mysql] - as the database.
-- [moca] - for unit testing
+- [mocha] - for unit testing
 
 ## Installation
 1. Download/pull the git repo first
@@ -28,7 +28,7 @@ localhost:3000
     "message": "Server Working!"
 }
 ```
-## API - Get All Bmi Details
+## API - Get All BMI Details
 Method : Get 
 ```sh
 localhost:3000/menu/
@@ -93,8 +93,26 @@ localhost:3000/menu/add
 }
 ```
 
+## Database Details
+```sh
+host: 'localhost',
+port: 3306,
+user: 'root',
+password: '12345678',
+database: 'test'
+table-name: bmi
+```
+The table schema more or like as below
+```sh
+
+```
+Sample schema and data will be available in the code repo with file name : [db_file.sql] (https://github.com/NagendraKommireddi/BMICode14-07-2022-KumarNagendraKommireddi/blob/main/db_file.sql)
+
+
 ## Running unit Tests
-NOTE: The server should be running for the unit tests to be run.
+NOTE: The server should be in running test to perform the unit testings.
+
+Please run the below command on a new terminal window
 ```sh
 mocha
 ```
