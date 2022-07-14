@@ -26,12 +26,21 @@ class MenuClass {
             if(!['Male','Female'].includes(element.Gender)){
                 throw new Error('Invalid Gender Param');
             }
-            if(isNaN(element.HeightCm) && element.HeightCm > 0){
+
+            if(isNaN(element.HeightCm)){
                 throw new Error('Invalid Height Param');
             }
-            if(isNaN(element.WeightKg) && element.WeightKg > 0){
+            if(isNaN(element.WeightKg)){
                 throw new Error('Invalid Weight Param');
             }
+
+            if(element.HeightCm <=0){
+                throw new Error('Height should be greater than 0');
+            }
+            if(element.WeightKg <=0){
+                throw new Error('Weight should be greater than 0');
+            }
+
             let bmi = element.WeightKg/Math.pow(element.HeightCm * 0.01,2);
             let sqlInsertData;
                 if (bmi <= 18.4 ){
