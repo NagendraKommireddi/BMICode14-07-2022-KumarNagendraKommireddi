@@ -1,6 +1,6 @@
 # BMICode14-07-2022-KumarNagendraKommireddi
 
-This rest-api app gives/adds the details of bmi of a person based on their height and weight.
+This rest-api app provides/stores the details of bmi of a person based on their height and weight.
 
 ## Technical details
 - [NodeJs] - Used  node js as the primary language
@@ -16,25 +16,26 @@ This rest-api app gives/adds the details of bmi of a person based on their heigh
     run npm run dev to start server.
 ```
 
-This app works as an api endpoints using #NodeJs,ExpressJs,Mysql
 
 ## API - Server Check
 Method : GET
 ```sh
 localhost:3000
 ```
-Sample Response:
+# Sample Response:
+```sh
 {
     "message": "Server Working!"
 }
-
+```
 ## API - Get All Bmi Details
 Method : Get 
 ```sh
 localhost:3000/menu/
 ```
 
-Sample Response:
+# Sample Response:
+```sh
 {
     "status": "success",
     "response": [
@@ -49,13 +50,15 @@ Sample Response:
         }
 ]
 }
+```
 
 ## API - Get All Bmi Details
 Method: Get
 ```sh
 localhost:3000/menu/overweightcount
 ```
-Sample Response:
+# Sample Response:
+```sh
 {
     "status": "success",
     "response": [
@@ -64,13 +67,15 @@ Sample Response:
         }
     ]
 }
+```
 
 ## API - Insert/Calculate Bmi Details
 Method: Post
 ```sh
 localhost:3000/menu/add
 ```
-Sample Request Body:
+# Sample Request Body:
+```sh
 [
     {
         "Gender": "Male",
@@ -78,11 +83,15 @@ Sample Request Body:
         "WeightKg": 96
     }
 ]
-Sample Response:
+```
+
+# Sample Response:
+```sh
 {
     "status": "success",
     "response": "Data Inserted Successfully"
 }
+```
 
 ## Running unit Tests
 NOTE: The server should be running for the unit tests to be run.
